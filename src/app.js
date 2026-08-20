@@ -7,6 +7,9 @@ import morgan from "morgan";
 import shipmentRoutes from "./routes/shipmentRoutes.js";
 import webhookRoutes from "./routes/webhookRoutes.js";
 import uploadRoutes from "./routes/uploadRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
+import notificationRoutes from "./routes/notificationRoutes.js";
+import cashfreeRoutes from "./routes/cashfreeRoutes.js";
 import logger from "./utils/logger.js";
 import { verifyFirebaseConnection } from "./config/firebase.js";
 
@@ -23,6 +26,9 @@ app.use(
 
 app.use(express.json({ limit: "20mb" }));
 app.use(express.urlencoded({ extended: true }));
+
+// Uploaded seller/application files are served by the backend.
+app.use("/uploads", express.static("uploads"));
 app.use(compression());
 app.use(morgan("dev"));
 
@@ -86,9 +92,12 @@ app.get("/api/health", async (req, res) => {
   }
 });
 
+app.use("/api/auth", authRoutes);
 app.use("/api/shipments", shipmentRoutes);
 app.use("/api/webhooks", webhookRoutes);
 app.use("/api/uploads", uploadRoutes);
+app.use("/api/notifications", notificationRoutes);
+app.use("/api/cashfree", cashfreeRoutes);
 
 app.use((req, res) => {
   res.status(404).json({

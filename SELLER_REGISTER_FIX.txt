@@ -1,0 +1,31 @@
+NovaCart Seller Register 404 FIX
+
+Added:
+POST /api/auth/seller/register
+POST /api/auth/seller/status
+POST /api/auth/seller/create-account
+POST /api/auth/seller/login
+POST /api/auth/seller/application/:applicationId/upload
+POST /api/auth/seller/application/:applicationId/documents
+
+The Flutter SellerRegistrationProvider already calls these endpoints.
+
+Also mounted:
+ /api/notifications
+ /api/cashfree
+
+Seller registration:
+- Creates seller_applications/{applicationId}
+- Generates a registration token
+- Stores only SHA-256 hash of registration token
+- Uploads application files under uploads/seller-applications/{applicationId}
+- Saves document URLs
+- Requires status=approved before account creation
+- Creates Firebase email/password user
+- Creates sellers/{uid} and users/{uid}
+- Creates JWT + Firebase custom token
+- Seller login uses mobile + bcrypt password
+
+IMPORTANT:
+Render uses ephemeral local disk for uploads. For production persistence,
+move seller documents to Firebase Storage/S3/R2 later. The route itself is fixed now.
