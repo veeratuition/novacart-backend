@@ -269,7 +269,16 @@ class AuthController {
   async uploadApplication(req, res) {
     try {
       const { applicationId } = req.params;
-      const token = String(req.body?.registrationToken || "").trim();
+
+      // Multipart/form-data parsers can expose the token in req.body, while
+      // some clients/proxies only preserve the custom header. Accept both.
+      const token = String(
+        req.body?.registrationToken ||
+        req.headers["x-registration-token"] ||
+        req.headers["X-Registration-Token"] ||
+        ""
+      ).trim();
+
       const folder = String(req.body?.folder || "document")
         .replace(/[^a-zA-Z0-9_-]/g, "_");
 

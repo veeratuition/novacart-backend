@@ -1,57 +1,79 @@
+import jwt from "jsonwebtoken";
 import { getAuth } from "firebase-admin/auth";
-import { isFirebaseReady, getFirebaseInitializationError } from "../config/firebase.js";
+import {
+  isFirebaseReady,
+  getFirebaseInitializationError,
+} from "../config/firebase.js";
+
+function getBearerToken(req) {
+  const header = req.headers.authorization || req.headers.Authorization;
+  if (!header || typeof header !== "string") return null;
+  if (!header.startsWith("Bearer ")) return null;
+  const token = header.slice("Bearer ".length).trim();
+  return token || null;
+}
+
+function verifyNovaCartJwt(token) {
+  const secret = String(process.env.JWT_SECRET || "").trim();
+  if (!secret) return null;
+
+  try {
+    const decoded = jwt.verify(token, secret, {
+      issuer: "novacart",
+    });
+
+    if (!decoded || typeof decoded !== "object") return null;
+    if (!decoded.uid || !decoded.role) return null;
+
+    return decoded;
+  } catch (_) {
+    return null;
+  }
+}
 
 export const verifyFirebaseToken = async (req, res, next) => {
+  const token = getBearerToken(req);
+
+  if (!token) {
+    return res.status(401).json({
+      success: false,
+      message: "Unauthorized: No Bearer token provided.",
+    });
+  }
+
+  // PRIMARY for NovaCart seller accounts:
+  // seller login/create-account returns our own JWT.
+  const jwtUser = verifyNovaCartJwt(token);
+  if (jwtUser) {
+    req.user = jwtUser;
+    req.authType = "jwt";
+    return next();
+  }
+
+  // BACKWARD COMPATIBILITY:
+  // Existing customer/admin Firebase-authenticated clients can continue
+  // using Firebase ID tokens.
   try {
-    // 1. Firebase Admin ఇనిషియలైజ్ అయిందో లేదో సరిచూడటం
-    const isReady = typeof isFirebaseReady === "function" ? isFirebaseReady() : false;
-
-    if (!isReady) {
-      const initErr = typeof getFirebaseInitializationError === "function" 
-        ? getFirebaseInitializationError() 
-        : "Firebase Admin is not initialized properly";
-
-      console.error("🚨 Auth Middleware Error: Firebase Not Ready ->", initErr);
-      return res.status(500).json({
+    if (!isFirebaseReady()) {
+      const initErr = getFirebaseInitializationError();
+      return res.status(503).json({
         success: false,
-        message: "Server Configuration Error: Authentication service unavailable",
-        error: typeof initErr === "object" ? initErr?.message : initErr,
+        message: "Authentication service is unavailable.",
+        error: initErr?.message || "Firebase Admin is not initialized.",
       });
     }
 
-    // 2. Authorization Header చెక్ చేయడం (Case-insensitive check)
-    const authHeader = req.headers.authorization || req.headers.Authorization;
-
-    if (!authHeader || typeof authHeader !== "string" || !authHeader.startsWith("Bearer ")) {
-      return res.status(401).json({
-        success: false,
-        message: "Unauthorized: No Bearer token provided in authorization header",
-      });
-    }
-
-    // 3. Token ని ఎక్స్‌ట్రాక్ట్ మరియు ట్రిమ్ చేయడం
-    const token = authHeader.split("Bearer ")[1]?.trim();
-
-    if (!token) {
-      return res.status(401).json({
-        success: false,
-        message: "Unauthorized: Token string is empty or malformed",
-      });
-    }
-
-    // 4. Firebase ID Token ని వెరిఫై చేయడం
     const decodedToken = await getAuth().verifyIdToken(token);
-
-    // Verified User డేటాను Request కి అటాచ్ చేయడం
     req.user = decodedToken;
+    req.authType = "firebase";
     return next();
   } catch (error) {
     console.error("❌ Auth Token Error:", error.message);
 
-    // Firebase Auth లో నిర్దిష్ట ఎర్రర్లకు తగిన రెస్పాన్స్ ఇవ్వడం
-    let customMessage = "Unauthorized: Invalid or expired authentication token";
+    let customMessage = "Unauthorized: Invalid or expired authentication token.";
     if (error.code === "auth/id-token-expired") {
-      customMessage = "Unauthorized: Token has expired. Please refresh your session.";
+      customMessage =
+        "Unauthorized: Token has expired. Please login again.";
     } else if (error.code === "auth/argument-error") {
       customMessage = "Unauthorized: Invalid token structure.";
     }
@@ -59,11 +81,9 @@ export const verifyFirebaseToken = async (req, res, next) => {
     return res.status(401).json({
       success: false,
       message: customMessage,
-      error: error.message,
     });
   }
 };
 
-// Aliases & Exports
 export const requireFirebaseAuth = verifyFirebaseToken;
 export default verifyFirebaseToken;
