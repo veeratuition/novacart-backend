@@ -19,3 +19,5 @@ src/config/serviceAccountKey.json
 .env
 .env.*
 !.env.example
+
+src/config/serviceAccountKey.json

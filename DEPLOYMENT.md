@@ -1,9 +1,36 @@
-# NovaCart backend deployment
+# NovaCart Backend Deployment
 
-Deploy the `backend` directory as the Render service root. Use `npm ci` as the build command and `npm start` as the start command.
+## Firebase Admin credentials on Render
 
-Set the variables from `.env.example` in Render. Firebase Admin accepts exactly one of `FIREBASE_SERVICE_ACCOUNT` (the complete JSON as one Render environment-variable value), `FIREBASE_SERVICE_ACCOUNT_BASE64`, or all of `FIREBASE_PROJECT_ID`, `FIREBASE_CLIENT_EMAIL`, and `FIREBASE_PRIVATE_KEY`. Do not upload a service-account JSON file or commit it to Git.
+Do NOT upload a Firebase service-account JSON file to GitHub.
 
-After deploy, open `/api/health`. It must return `success: true` and `services.firebase: ready` before creating a shipment. A `503` with `firebase: not_configured` means configuration is missing; the service intentionally remains up instead of crashing with a 502.
+In Render -> Environment, the safest option is to set the complete service-account JSON in `FIREBASE_SERVICE_ACCOUNT`.
 
-The mobile app authenticates every shipping request with a Firebase ID token. The backend verifies it and allows a seller to access only orders whose `sellerId` matches that token's UID.
+Use the EXACT JSON downloaded for the service account whose private key you want to keep using. The backend now prefers this complete JSON so project ID, client email and private key always stay paired.
+
+If you do not use JSON, the fallback is:
+- FIREBASE_PROJECT_ID = novacart-4dcd8
+- FIREBASE_CLIENT_EMAIL = the client_email belonging to the SAME key
+- FIREBASE_PRIVATE_KEY = the private_key belonging to the SAME key, with literal `\n` between lines if Render stores it on one line
+
+Do not mix a private key from one service-account key with a client email from another.
+
+After changing credentials, redeploy the service.
+
+## Health check
+
+Open:
+
+GET /api/health
+
+A successful response contains:
+
+`"firebase":"ready"`
+
+The health endpoint performs a real Firestore read, so it validates Google authentication rather than merely checking whether the SDK initialized.
+
+## Seller registration
+
+POST /api/auth/seller/register
+
+The seller registration endpoint uses the same Firestore Admin credential and therefore must only be tested after `/api/health` returns Firebase ready.

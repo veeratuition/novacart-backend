@@ -3,7 +3,7 @@ dotenv.config();
 
 import app from "./app.js";
 import env from "./config/env.js";
-import "./config/firebase.js";
+import { isFirebaseReady, getFirebaseInitializationError } from "./config/firebase.js";
 
 const PORT = Number(process.env.PORT || env?.port || 5001);
 
@@ -16,7 +16,8 @@ async function startServer() {
       console.log("🚀 NovaCart Backend Started");
       console.log(`🌍 Environment : ${process.env.NODE_ENV || env?.nodeEnv || "development"}`);
       console.log(`📡 Server Port : ${PORT}`);
-      console.log("🔥 Firebase Admin : initialized");
+      console.log(`🔥 Firebase Admin : ${isFirebaseReady() ? "initialized" : "not ready"}`);
+      if (!isFirebaseReady()) console.error(`❌ Firebase error: ${getFirebaseInitializationError()?.message || "unknown"}`);
       console.log("=======================================");
     });
   } catch (error) {
