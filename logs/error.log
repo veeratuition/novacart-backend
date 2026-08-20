@@ -1,0 +1,206 @@
+[2026-08-06 13:21:35] ERROR : Error: Shipment ID not found
+    at TrackingSyncService.processWebhook (file:///C:/marketplace_seller/backend/src/services/trackingSyncService.js:20:15)
+    at shiprocketWebhook (file:///C:/marketplace_seller/backend/src/controllers/webhookController.js:18:48)
+    at newFn (C:\marketplace_seller\backend\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\marketplace_seller\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\marketplace_seller\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\marketplace_seller\backend\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\marketplace_seller\backend\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\marketplace_seller\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\marketplace_seller\backend\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\marketplace_seller\backend\node_modules\express\lib\router\index.js:346:12)
+[2026-08-06 13:21:35] ERROR : Error: Shipment ID not found
+    at TrackingSyncService.processWebhook (file:///C:/marketplace_seller/backend/src/services/trackingSyncService.js:20:15)
+    at shiprocketWebhook (file:///C:/marketplace_seller/backend/src/controllers/webhookController.js:18:48)
+    at newFn (C:\marketplace_seller\backend\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\marketplace_seller\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\marketplace_seller\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\marketplace_seller\backend\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\marketplace_seller\backend\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\marketplace_seller\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\marketplace_seller\backend\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\marketplace_seller\backend\node_modules\express\lib\router\index.js:346:12)
+[2026-08-06 13:41:50] ERROR : Shiprocket API Error [/orders/print/invoice]: Order ids required.
+[2026-08-06 13:41:50] ERROR : Error: Order ids required.
+    at ShiprocketService.request (file:///C:/marketplace_seller/backend/src/services/shiprocketService.js:124:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async ShiprocketService.generateInvoice (file:///C:/marketplace_seller/backend/src/services/shiprocketService.js:188:12)
+    at async generateInvoice (file:///C:/marketplace_seller/backend/src/controllers/shipmentController.js:353:31)
+[2026-08-06 15:59:57] ERROR : Shiprocket API Error [/courier/generate/pickup]: Awb not Assigned
+[2026-08-06 15:59:57] ERROR : Pickup Request Failed: Awb not Assigned
+[2026-08-06 16:09:19] ERROR : Shiprocket API Error [/courier/generate/pickup]: Awb not Assigned
+[2026-08-06 16:09:19] ERROR : Pickup Request Failed: Awb not Assigned
+[2026-08-06 16:12:13] ERROR : Shiprocket API Error [/courier/generate/pickup]: Already in Pickup Queue.
+[2026-08-06 16:12:13] ERROR : Pickup Request Failed: Already in Pickup Queue.
+[2026-08-06 16:27:23] ERROR : Shiprocket API Error [/courier/generate/pickup]: Already in Pickup Queue.
+[2026-08-06 16:27:23] ERROR : Pickup Request Failed: Already in Pickup Queue.
+[2026-08-06 18:16:02] ERROR : Error: 16 UNAUTHENTICATED: Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at callErrorFromStatus (C:\marketplace_seller\backend\node_modules\@grpc\grpc-js\build\src\call.js:32:19)
+    at Object.onReceiveStatus (C:\marketplace_seller\backend\node_modules\@grpc\grpc-js\build\src\client.js:359:73)
+    at Object.onReceiveStatus (C:\marketplace_seller\backend\node_modules\@grpc\grpc-js\build\src\client-interceptors.js:327:181)
+    at C:\marketplace_seller\backend\node_modules\@grpc\grpc-js\build\src\resolving-call.js:135:78
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+for call at
+    at ServiceClientImpl.makeServerStreamRequest (C:\marketplace_seller\backend\node_modules\@grpc\grpc-js\build\src\client.js:342:32)
+    at ServiceClientImpl.<anonymous> (C:\marketplace_seller\backend\node_modules\@grpc\grpc-js\build\src\make-client.js:105:19)
+    at C:\marketplace_seller\backend\node_modules\@google-cloud\firestore\build\src\v1\firestore_client.js:269:29
+    at C:\marketplace_seller\backend\node_modules\google-gax\build\src\streamingCalls\streamingApiCaller.js:39:28
+    at C:\marketplace_seller\backend\node_modules\google-gax\build\src\normalCalls\timeout.js:44:16
+    at Object.request (C:\marketplace_seller\backend\node_modules\google-gax\build\src\streamingCalls\streaming.js:248:40)
+    at makeRequest (C:\marketplace_seller\backend\node_modules\google-gax\node_modules\retry-request\index.js:159:28)
+    at retryRequest (C:\marketplace_seller\backend\node_modules\google-gax\node_modules\retry-request\index.js:119:5)
+    at StreamProxy.setStream (C:\marketplace_seller\backend\node_modules\google-gax\build\src\streamingCalls\streaming.js:239:37)
+    at StreamingApiCaller.call (C:\marketplace_seller\backend\node_modules\google-gax\build\src\streamingCalls\streamingApiCaller.js:55:16)
+Caused by: Error
+    at C:\marketplace_seller\backend\node_modules\@google-cloud\firestore\build\src\index.js:1097:27
+    at C:\marketplace_seller\backend\node_modules\@google-cloud\firestore\build\src\telemetry\enabled-trace-util.js:125:30
+    at NoopContextManager.with (C:\marketplace_seller\backend\node_modules\@opentelemetry\api\build\src\context\NoopContextManager.js:14:19)
+    at ContextAPI.with (C:\marketplace_seller\backend\node_modules\@opentelemetry\api\build\src\api\context.js:51:46)
+    at NoopTracer.startActiveSpan (C:\marketplace_seller\backend\node_modules\@opentelemetry\api\build\src\trace\NoopTracer.js:54:31)
+    at ProxyTracer.startActiveSpan (C:\marketplace_seller\backend\node_modules\@opentelemetry\api\build\src\trace\ProxyTracer.js:27:24)
+    at EnabledTraceUtil.startActiveSpan (C:\marketplace_seller\backend\node_modules\@google-cloud\firestore\build\src\telemetry\enabled-trace-util.js:117:28)
+    at Firestore.getAll (C:\marketplace_seller\backend\node_modules\@google-cloud\firestore\build\src\index.js:1088:32)
+    at C:\marketplace_seller\backend\node_modules\@google-cloud\firestore\build\src\reference\document-reference.js:185:36
+    at C:\marketplace_seller\backend\node_modules\@google-cloud\firestore\build\src\telemetry\enabled-trace-util.js:125:30
+[2026-08-06 21:56:10] ERROR : Shiprocket API Error [/courier/generate/pickup]: Already in Pickup Queue.
+[2026-08-06 21:56:10] ERROR : Pickup Request Failed: Already in Pickup Queue.
+[2026-08-06 21:56:52] ERROR : Shiprocket API Error [/courier/generate/pickup]: Already in Pickup Queue.
+[2026-08-06 21:56:52] ERROR : Pickup Request Failed: Already in Pickup Queue.
+[2026-08-06 22:43:58] ERROR : Shiprocket API Error [/courier/generate/pickup]: Already in Pickup Queue.
+[2026-08-06 22:43:58] ERROR : Pickup Request Failed: Already in Pickup Queue.
+[2026-08-06 22:46:00] ERROR : Shiprocket API Error [/courier/generate/pickup]: Awb not Assigned
+[2026-08-06 22:46:00] ERROR : Pickup Request Failed: Awb not Assigned
+[2026-08-07 14:04:41] ERROR : SyntaxError: Unexpected token '"', ""{\r\n  \""... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:90:15)
+    at C:\marketplace_seller\backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:227:14)
+    at invokeCallback (C:\marketplace_seller\backend\node_modules\raw-body\index.js:238:16)
+    at done (C:\marketplace_seller\backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\marketplace_seller\backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:509:28)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+[2026-08-07 14:06:27] ERROR : SyntaxError: Unexpected token '"', ""{\r\n  \""... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:90:15)
+    at C:\marketplace_seller\backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:227:14)
+    at invokeCallback (C:\marketplace_seller\backend\node_modules\raw-body\index.js:238:16)
+    at done (C:\marketplace_seller\backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\marketplace_seller\backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:509:28)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+[2026-08-07 14:06:31] ERROR : SyntaxError: Unexpected token '"', ""{\r\n  \""... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:90:15)
+    at C:\marketplace_seller\backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:227:14)
+    at invokeCallback (C:\marketplace_seller\backend\node_modules\raw-body\index.js:238:16)
+    at done (C:\marketplace_seller\backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\marketplace_seller\backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:509:28)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+[2026-08-07 14:06:31] ERROR : SyntaxError: Unexpected token '"', ""{\r\n  \""... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:90:15)
+    at C:\marketplace_seller\backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:227:14)
+    at invokeCallback (C:\marketplace_seller\backend\node_modules\raw-body\index.js:238:16)
+    at done (C:\marketplace_seller\backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\marketplace_seller\backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:509:28)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+[2026-08-07 14:06:32] ERROR : SyntaxError: Unexpected token '"', ""{\r\n  \""... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:90:15)
+    at C:\marketplace_seller\backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:227:14)
+    at invokeCallback (C:\marketplace_seller\backend\node_modules\raw-body\index.js:238:16)
+    at done (C:\marketplace_seller\backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\marketplace_seller\backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:509:28)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+[2026-08-07 14:06:32] ERROR : SyntaxError: Unexpected token '"', ""{\r\n  \""... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:90:15)
+    at C:\marketplace_seller\backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:227:14)
+    at invokeCallback (C:\marketplace_seller\backend\node_modules\raw-body\index.js:238:16)
+    at done (C:\marketplace_seller\backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\marketplace_seller\backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:509:28)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+[2026-08-07 14:06:32] ERROR : SyntaxError: Unexpected token '"', ""{\r\n  \""... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:90:15)
+    at C:\marketplace_seller\backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:227:14)
+    at invokeCallback (C:\marketplace_seller\backend\node_modules\raw-body\index.js:238:16)
+    at done (C:\marketplace_seller\backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\marketplace_seller\backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:509:28)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+[2026-08-07 14:06:32] ERROR : SyntaxError: Unexpected token '"', ""{\r\n  \""... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:90:15)
+    at C:\marketplace_seller\backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:227:14)
+    at invokeCallback (C:\marketplace_seller\backend\node_modules\raw-body\index.js:238:16)
+    at done (C:\marketplace_seller\backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\marketplace_seller\backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:509:28)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+[2026-08-07 14:06:33] ERROR : SyntaxError: Unexpected token '"', ""{\r\n  \""... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:90:15)
+    at C:\marketplace_seller\backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:227:14)
+    at invokeCallback (C:\marketplace_seller\backend\node_modules\raw-body\index.js:238:16)
+    at done (C:\marketplace_seller\backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\marketplace_seller\backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:509:28)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+[2026-08-07 14:06:33] ERROR : SyntaxError: Unexpected token '"', ""{\r\n  \""... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:90:15)
+    at C:\marketplace_seller\backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:227:14)
+    at invokeCallback (C:\marketplace_seller\backend\node_modules\raw-body\index.js:238:16)
+    at done (C:\marketplace_seller\backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\marketplace_seller\backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:509:28)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+[2026-08-07 14:14:38] ERROR : SyntaxError: Unexpected token '"', ""{\r\n  \""... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:90:15)
+    at C:\marketplace_seller\backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:227:14)
+    at invokeCallback (C:\marketplace_seller\backend\node_modules\raw-body\index.js:238:16)
+    at done (C:\marketplace_seller\backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\marketplace_seller\backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:509:28)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+[2026-08-07 14:16:05] ERROR : Create Shipment Error: Error: Failed to create shipment on Shiprocket
+    at createShipment (file:///C:/marketplace_seller/backend/src/controllers/shipmentController.js:163:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+[2026-08-07 14:19:34] ERROR : Shiprocket API Error [/courier/generate/pickup]: Already in Pickup Queue.
+[2026-08-07 14:19:34] ERROR : Pickup Request Failed: Already in Pickup Queue.
+[2026-08-07 14:25:17] ERROR : Shiprocket API Error [/courier/generate/pickup]: Already in Pickup Queue.
+[2026-08-07 14:25:17] ERROR : Pickup Request Failed: Already in Pickup Queue.
+[2026-08-07 14:34:40] ERROR : Shiprocket API Error [/courier/generate/pickup]: Already in Pickup Queue.
+[2026-08-07 14:34:40] ERROR : Pickup Request Failed: Already in Pickup Queue.
+[2026-08-07 14:44:09] ERROR : Shiprocket API Error [/courier/generate/pickup]: Already in Pickup Queue.
+[2026-08-07 14:44:09] ERROR : Pickup Request Failed: Already in Pickup Queue.
+[2026-08-07 15:49:26] ERROR : Shiprocket API Error [/courier/generate/pickup]: Already in Pickup Queue.
+[2026-08-07 15:49:26] ERROR : Pickup Request Failed: Already in Pickup Queue.

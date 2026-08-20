@@ -1,0 +1,353 @@
+[2026-08-06 09:55:34] INFO : Track Shipment API Called
+[2026-08-06 09:56:07] INFO : Generate Invoice API Called
+[2026-08-06 10:19:41] INFO : Shiprocket Authentication Test API Called
+[2026-08-06 10:19:41] INFO : Authenticating with Shiprocket...
+[2026-08-06 10:19:41] INFO : Shiprocket authentication successful
+[2026-08-06 11:54:51] INFO : Shiprocket Authentication Test API Called
+[2026-08-06 11:54:51] INFO : Authenticating with Shiprocket API...
+[2026-08-06 11:54:51] INFO : Shiprocket Authentication Successful
+[2026-08-06 11:56:39] INFO : Create Shipment API Called
+[2026-08-06 11:58:09] INFO : Create Shipment API Called
+[2026-08-06 11:58:18] INFO : Create Shipment API Called
+[2026-08-06 11:58:59] INFO : Create Shipment API Called
+[2026-08-06 12:00:12] INFO : Create Shipment API Called
+[2026-08-06 12:00:44] INFO : Create Shipment API Called
+[2026-08-06 12:02:02] INFO : Create Shipment API Called
+[2026-08-06 12:11:40] INFO : Create Shipment API Called
+[2026-08-06 12:12:58] INFO : Create Shipment API Called
+[2026-08-06 12:15:14] INFO : Create Shipment API Called
+[2026-08-06 12:18:14] INFO : Create Shipment API Called
+[2026-08-06 12:20:16] INFO : Create Shipment API Called
+[2026-08-06 12:22:49] INFO : Create Shipment API Called
+[2026-08-06 12:26:38] INFO : Create Shipment API Called
+[2026-08-06 12:30:48] INFO : Create Shipment API Called
+[2026-08-06 12:30:52] INFO : Create Shipment API Called
+[2026-08-06 12:30:55] INFO : Create Shipment API Called
+[2026-08-06 12:35:25] INFO : Create Shipment API Called
+[2026-08-06 12:37:48] INFO : Create Shipment API Called
+[2026-08-06 12:43:23] INFO : Create Shipment API Called
+[2026-08-06 12:43:26] INFO : Authenticating with Shiprocket API...
+[2026-08-06 12:43:26] INFO : Shiprocket Authentication Successful
+[2026-08-06 12:43:27] INFO : Shiprocket POST /orders/create/adhoc Success
+[2026-08-06 12:49:33] INFO : Create Shipment API Called
+[2026-08-06 12:49:35] INFO : Shiprocket POST /orders/create/adhoc Success
+[2026-08-06 12:49:40] INFO : Shiprocket POST /courier/assign/awb Success
+[2026-08-06 12:49:40] INFO : AWB assigned and saved successfully for shipment: 1495041016
+[2026-08-06 13:03:45] INFO : Create Shipment API Called
+[2026-08-06 13:03:46] INFO : Shiprocket POST /orders/create/adhoc Success
+[2026-08-06 13:03:47] INFO : Shiprocket POST /courier/assign/awb Success
+[2026-08-06 13:03:47] INFO : AWB assigned and saved successfully for shipment: 1495041016
+[2026-08-06 13:21:35] INFO : Shiprocket Webhook Received
+[2026-08-06 13:21:35] INFO : Shiprocket Webhook Processing Started
+[2026-08-06 13:21:35] ERROR : Error: Shipment ID not found
+    at TrackingSyncService.processWebhook (file:///C:/marketplace_seller/backend/src/services/trackingSyncService.js:20:15)
+    at shiprocketWebhook (file:///C:/marketplace_seller/backend/src/controllers/webhookController.js:18:48)
+    at newFn (C:\marketplace_seller\backend\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\marketplace_seller\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\marketplace_seller\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\marketplace_seller\backend\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\marketplace_seller\backend\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\marketplace_seller\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\marketplace_seller\backend\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\marketplace_seller\backend\node_modules\express\lib\router\index.js:346:12)
+[2026-08-06 13:21:35] ERROR : Error: Shipment ID not found
+    at TrackingSyncService.processWebhook (file:///C:/marketplace_seller/backend/src/services/trackingSyncService.js:20:15)
+    at shiprocketWebhook (file:///C:/marketplace_seller/backend/src/controllers/webhookController.js:18:48)
+    at newFn (C:\marketplace_seller\backend\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\marketplace_seller\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\marketplace_seller\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\marketplace_seller\backend\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\marketplace_seller\backend\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\marketplace_seller\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\marketplace_seller\backend\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\marketplace_seller\backend\node_modules\express\lib\router\index.js:346:12)
+[2026-08-06 13:22:07] INFO : Shiprocket Webhook Received
+[2026-08-06 13:22:07] INFO : Shiprocket Webhook Processing Started
+[2026-08-06 13:22:09] INFO : Shipment 1495041016 updated successfully
+[2026-08-06 13:30:22] INFO : Authenticating with Shiprocket API...
+[2026-08-06 13:30:23] INFO : Shiprocket Authentication Successful
+[2026-08-06 13:30:23] INFO : Shiprocket POST /courier/generate/label Success
+[2026-08-06 13:35:09] INFO : Authenticating with Shiprocket API...
+[2026-08-06 13:35:10] INFO : Shiprocket Authentication Successful
+[2026-08-06 13:35:10] INFO : Shiprocket POST /courier/generate/label Success
+[2026-08-06 13:36:04] INFO : Shiprocket POST /courier/generate/label Success
+[2026-08-06 13:40:34] INFO : Authenticating with Shiprocket API...
+[2026-08-06 13:40:35] INFO : Shiprocket Authentication Successful
+[2026-08-06 13:40:36] INFO : Shiprocket POST /courier/generate/label Success
+[2026-08-06 13:41:50] ERROR : Shiprocket API Error [/orders/print/invoice]: Order ids required.
+[2026-08-06 13:41:50] ERROR : Error: Order ids required.
+    at ShiprocketService.request (file:///C:/marketplace_seller/backend/src/services/shiprocketService.js:124:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async ShiprocketService.generateInvoice (file:///C:/marketplace_seller/backend/src/services/shiprocketService.js:188:12)
+    at async generateInvoice (file:///C:/marketplace_seller/backend/src/controllers/shipmentController.js:353:31)
+[2026-08-06 13:47:49] INFO : Authenticating with Shiprocket API...
+[2026-08-06 13:47:49] INFO : Shiprocket Authentication Successful
+[2026-08-06 13:47:50] INFO : Shiprocket POST /orders/print/invoice Success
+[2026-08-06 15:43:12] INFO : Create Shipment API Called
+[2026-08-06 15:59:52] INFO : Create Shipment API Called
+[2026-08-06 15:59:54] INFO : Authenticating with Shiprocket API...
+[2026-08-06 15:59:54] INFO : Shiprocket Authentication Successful
+[2026-08-06 15:59:54] WARN : Shiprocket request failed for /orders/create/adhoc. Retrying (1/2) after 1000ms...
+[2026-08-06 15:59:56] INFO : Shiprocket POST /orders/create/adhoc Success
+[2026-08-06 15:59:56] INFO : Shiprocket POST /courier/assign/awb Success
+[2026-08-06 15:59:56] INFO : AWB Assigned Successfully
+[2026-08-06 15:59:57] ERROR : Shiprocket API Error [/courier/generate/pickup]: Awb not Assigned
+[2026-08-06 15:59:57] ERROR : Pickup Request Failed: Awb not Assigned
+[2026-08-06 16:09:17] INFO : Create Shipment API Called
+[2026-08-06 16:09:18] INFO : Authenticating with Shiprocket API...
+[2026-08-06 16:09:18] INFO : Shiprocket Authentication Successful
+[2026-08-06 16:09:19] INFO : Shiprocket POST /orders/create/adhoc Success
+[2026-08-06 16:09:19] INFO : Shiprocket POST /courier/assign/awb Success
+[2026-08-06 16:09:19] INFO : AWB Assigned Successfully
+[2026-08-06 16:09:19] ERROR : Shiprocket API Error [/courier/generate/pickup]: Awb not Assigned
+[2026-08-06 16:09:19] ERROR : Pickup Request Failed: Awb not Assigned
+[2026-08-06 16:12:08] INFO : Create Shipment API Called
+[2026-08-06 16:12:09] INFO : Shiprocket POST /orders/create/adhoc Success
+[2026-08-06 16:12:13] INFO : Shiprocket POST /courier/assign/awb Success
+[2026-08-06 16:12:13] INFO : AWB Assigned Successfully
+[2026-08-06 16:12:13] ERROR : Shiprocket API Error [/courier/generate/pickup]: Already in Pickup Queue.
+[2026-08-06 16:12:13] ERROR : Pickup Request Failed: Already in Pickup Queue.
+[2026-08-06 16:23:54] INFO : Create Shipment API Called
+[2026-08-06 16:23:56] INFO : Shiprocket Auth Token generated successfully
+[2026-08-06 16:24:33] INFO : Create Shipment API Called
+[2026-08-06 16:26:24] INFO : Create Shipment API Called
+[2026-08-06 16:27:17] INFO : Create Shipment API Called
+[2026-08-06 16:27:18] INFO : Authenticating with Shiprocket API...
+[2026-08-06 16:27:19] INFO : Shiprocket Authentication Successful
+[2026-08-06 16:27:19] INFO : Shiprocket POST /orders/create/adhoc Success
+[2026-08-06 16:27:23] INFO : Shiprocket POST /courier/assign/awb Success
+[2026-08-06 16:27:23] INFO : AWB Assigned Successfully
+[2026-08-06 16:27:23] ERROR : Shiprocket API Error [/courier/generate/pickup]: Already in Pickup Queue.
+[2026-08-06 16:27:23] ERROR : Pickup Request Failed: Already in Pickup Queue.
+[2026-08-06 18:16:00] INFO : Create Shipment API Called
+[2026-08-06 18:16:02] ERROR : Error: 16 UNAUTHENTICATED: Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at callErrorFromStatus (C:\marketplace_seller\backend\node_modules\@grpc\grpc-js\build\src\call.js:32:19)
+    at Object.onReceiveStatus (C:\marketplace_seller\backend\node_modules\@grpc\grpc-js\build\src\client.js:359:73)
+    at Object.onReceiveStatus (C:\marketplace_seller\backend\node_modules\@grpc\grpc-js\build\src\client-interceptors.js:327:181)
+    at C:\marketplace_seller\backend\node_modules\@grpc\grpc-js\build\src\resolving-call.js:135:78
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+for call at
+    at ServiceClientImpl.makeServerStreamRequest (C:\marketplace_seller\backend\node_modules\@grpc\grpc-js\build\src\client.js:342:32)
+    at ServiceClientImpl.<anonymous> (C:\marketplace_seller\backend\node_modules\@grpc\grpc-js\build\src\make-client.js:105:19)
+    at C:\marketplace_seller\backend\node_modules\@google-cloud\firestore\build\src\v1\firestore_client.js:269:29
+    at C:\marketplace_seller\backend\node_modules\google-gax\build\src\streamingCalls\streamingApiCaller.js:39:28
+    at C:\marketplace_seller\backend\node_modules\google-gax\build\src\normalCalls\timeout.js:44:16
+    at Object.request (C:\marketplace_seller\backend\node_modules\google-gax\build\src\streamingCalls\streaming.js:248:40)
+    at makeRequest (C:\marketplace_seller\backend\node_modules\google-gax\node_modules\retry-request\index.js:159:28)
+    at retryRequest (C:\marketplace_seller\backend\node_modules\google-gax\node_modules\retry-request\index.js:119:5)
+    at StreamProxy.setStream (C:\marketplace_seller\backend\node_modules\google-gax\build\src\streamingCalls\streaming.js:239:37)
+    at StreamingApiCaller.call (C:\marketplace_seller\backend\node_modules\google-gax\build\src\streamingCalls\streamingApiCaller.js:55:16)
+Caused by: Error
+    at C:\marketplace_seller\backend\node_modules\@google-cloud\firestore\build\src\index.js:1097:27
+    at C:\marketplace_seller\backend\node_modules\@google-cloud\firestore\build\src\telemetry\enabled-trace-util.js:125:30
+    at NoopContextManager.with (C:\marketplace_seller\backend\node_modules\@opentelemetry\api\build\src\context\NoopContextManager.js:14:19)
+    at ContextAPI.with (C:\marketplace_seller\backend\node_modules\@opentelemetry\api\build\src\api\context.js:51:46)
+    at NoopTracer.startActiveSpan (C:\marketplace_seller\backend\node_modules\@opentelemetry\api\build\src\trace\NoopTracer.js:54:31)
+    at ProxyTracer.startActiveSpan (C:\marketplace_seller\backend\node_modules\@opentelemetry\api\build\src\trace\ProxyTracer.js:27:24)
+    at EnabledTraceUtil.startActiveSpan (C:\marketplace_seller\backend\node_modules\@google-cloud\firestore\build\src\telemetry\enabled-trace-util.js:117:28)
+    at Firestore.getAll (C:\marketplace_seller\backend\node_modules\@google-cloud\firestore\build\src\index.js:1088:32)
+    at C:\marketplace_seller\backend\node_modules\@google-cloud\firestore\build\src\reference\document-reference.js:185:36
+    at C:\marketplace_seller\backend\node_modules\@google-cloud\firestore\build\src\telemetry\enabled-trace-util.js:125:30
+[2026-08-06 18:18:08] INFO : Create Shipment API Called
+[2026-08-06 21:56:07] INFO : Create Shipment API Called
+[2026-08-06 21:56:09] INFO : Authenticating with Shiprocket API...
+[2026-08-06 21:56:10] INFO : Shiprocket Authentication Successful
+[2026-08-06 21:56:10] INFO : Shiprocket POST /orders/create/adhoc Success
+[2026-08-06 21:56:10] ERROR : Shiprocket API Error [/courier/generate/pickup]: Already in Pickup Queue.
+[2026-08-06 21:56:10] ERROR : Pickup Request Failed: Already in Pickup Queue.
+[2026-08-06 21:56:51] INFO : Create Shipment API Called
+[2026-08-06 21:56:52] INFO : Shiprocket POST /orders/create/adhoc Success
+[2026-08-06 21:56:52] ERROR : Shiprocket API Error [/courier/generate/pickup]: Already in Pickup Queue.
+[2026-08-06 21:56:52] ERROR : Pickup Request Failed: Already in Pickup Queue.
+[2026-08-06 22:43:56] INFO : Create Shipment API Called
+[2026-08-06 22:43:58] INFO : Shiprocket POST /orders/create/adhoc Success
+[2026-08-06 22:43:58] ERROR : Shiprocket API Error [/courier/generate/pickup]: Already in Pickup Queue.
+[2026-08-06 22:43:58] ERROR : Pickup Request Failed: Already in Pickup Queue.
+[2026-08-06 22:45:58] INFO : Create Shipment API Called
+[2026-08-06 22:45:59] INFO : Shiprocket POST /orders/create/adhoc Success
+[2026-08-06 22:46:00] INFO : Shiprocket POST /courier/assign/awb Success
+[2026-08-06 22:46:00] INFO : AWB Assigned Successfully
+[2026-08-06 22:46:00] ERROR : Shiprocket API Error [/courier/generate/pickup]: Awb not Assigned
+[2026-08-06 22:46:00] ERROR : Pickup Request Failed: Awb not Assigned
+[2026-08-07 14:03:59] INFO : Create Shipment API Called
+[2026-08-07 14:04:41] ERROR : SyntaxError: Unexpected token '"', ""{\r\n  \""... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:90:15)
+    at C:\marketplace_seller\backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:227:14)
+    at invokeCallback (C:\marketplace_seller\backend\node_modules\raw-body\index.js:238:16)
+    at done (C:\marketplace_seller\backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\marketplace_seller\backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:509:28)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+[2026-08-07 14:06:27] ERROR : SyntaxError: Unexpected token '"', ""{\r\n  \""... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:90:15)
+    at C:\marketplace_seller\backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:227:14)
+    at invokeCallback (C:\marketplace_seller\backend\node_modules\raw-body\index.js:238:16)
+    at done (C:\marketplace_seller\backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\marketplace_seller\backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:509:28)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+[2026-08-07 14:06:31] ERROR : SyntaxError: Unexpected token '"', ""{\r\n  \""... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:90:15)
+    at C:\marketplace_seller\backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:227:14)
+    at invokeCallback (C:\marketplace_seller\backend\node_modules\raw-body\index.js:238:16)
+    at done (C:\marketplace_seller\backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\marketplace_seller\backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:509:28)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+[2026-08-07 14:06:31] ERROR : SyntaxError: Unexpected token '"', ""{\r\n  \""... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:90:15)
+    at C:\marketplace_seller\backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:227:14)
+    at invokeCallback (C:\marketplace_seller\backend\node_modules\raw-body\index.js:238:16)
+    at done (C:\marketplace_seller\backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\marketplace_seller\backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:509:28)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+[2026-08-07 14:06:32] ERROR : SyntaxError: Unexpected token '"', ""{\r\n  \""... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:90:15)
+    at C:\marketplace_seller\backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:227:14)
+    at invokeCallback (C:\marketplace_seller\backend\node_modules\raw-body\index.js:238:16)
+    at done (C:\marketplace_seller\backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\marketplace_seller\backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:509:28)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+[2026-08-07 14:06:32] ERROR : SyntaxError: Unexpected token '"', ""{\r\n  \""... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:90:15)
+    at C:\marketplace_seller\backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:227:14)
+    at invokeCallback (C:\marketplace_seller\backend\node_modules\raw-body\index.js:238:16)
+    at done (C:\marketplace_seller\backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\marketplace_seller\backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:509:28)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+[2026-08-07 14:06:32] ERROR : SyntaxError: Unexpected token '"', ""{\r\n  \""... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:90:15)
+    at C:\marketplace_seller\backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:227:14)
+    at invokeCallback (C:\marketplace_seller\backend\node_modules\raw-body\index.js:238:16)
+    at done (C:\marketplace_seller\backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\marketplace_seller\backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:509:28)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+[2026-08-07 14:06:32] ERROR : SyntaxError: Unexpected token '"', ""{\r\n  \""... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:90:15)
+    at C:\marketplace_seller\backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:227:14)
+    at invokeCallback (C:\marketplace_seller\backend\node_modules\raw-body\index.js:238:16)
+    at done (C:\marketplace_seller\backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\marketplace_seller\backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:509:28)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+[2026-08-07 14:06:33] ERROR : SyntaxError: Unexpected token '"', ""{\r\n  \""... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:90:15)
+    at C:\marketplace_seller\backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:227:14)
+    at invokeCallback (C:\marketplace_seller\backend\node_modules\raw-body\index.js:238:16)
+    at done (C:\marketplace_seller\backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\marketplace_seller\backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:509:28)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+[2026-08-07 14:06:33] ERROR : SyntaxError: Unexpected token '"', ""{\r\n  \""... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:90:15)
+    at C:\marketplace_seller\backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:227:14)
+    at invokeCallback (C:\marketplace_seller\backend\node_modules\raw-body\index.js:238:16)
+    at done (C:\marketplace_seller\backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\marketplace_seller\backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:509:28)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+[2026-08-07 14:06:41] INFO : Create Shipment API Called
+[2026-08-07 14:07:01] INFO : Create Shipment API Called
+[2026-08-07 14:07:11] INFO : Create Shipment API Called
+[2026-08-07 14:11:09] INFO : Create Shipment API Called
+[2026-08-07 14:11:41] INFO : Create Shipment API Called
+[2026-08-07 14:14:27] INFO : Create Shipment API Called
+[2026-08-07 14:14:38] ERROR : SyntaxError: Unexpected token '"', ""{\r\n  \""... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (C:\marketplace_seller\backend\node_modules\body-parser\lib\types\json.js:90:15)
+    at C:\marketplace_seller\backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:227:14)
+    at invokeCallback (C:\marketplace_seller\backend\node_modules\raw-body\index.js:238:16)
+    at done (C:\marketplace_seller\backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\marketplace_seller\backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:509:28)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+[2026-08-07 14:16:02] INFO : Create Shipment API Called
+[2026-08-07 14:16:04] INFO : Authenticating with Shiprocket API...
+[2026-08-07 14:16:04] INFO : ✅ Shiprocket Authentication Successful
+[2026-08-07 14:16:05] INFO : Shiprocket POST /orders/create/adhoc Success
+[2026-08-07 14:16:05] ERROR : Create Shipment Error: Error: Failed to create shipment on Shiprocket
+    at createShipment (file:///C:/marketplace_seller/backend/src/controllers/shipmentController.js:163:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+[2026-08-07 14:19:27] INFO : Create Shipment API Called
+[2026-08-07 14:19:29] INFO : Authenticating with Shiprocket API...
+[2026-08-07 14:19:29] INFO : ✅ Shiprocket Authentication Successful
+[2026-08-07 14:19:30] INFO : Shiprocket POST /orders/create/adhoc Success
+[2026-08-07 14:19:34] INFO : Shiprocket POST /courier/assign/awb Success
+[2026-08-07 14:19:34] INFO : AWB Assigned Successfully: 371517154228
+[2026-08-07 14:19:34] ERROR : Shiprocket API Error [/courier/generate/pickup]: Already in Pickup Queue.
+[2026-08-07 14:19:34] ERROR : Pickup Request Failed: Already in Pickup Queue.
+[2026-08-07 14:25:06] INFO : Create Shipment API Called
+[2026-08-07 14:25:10] INFO : Authenticating with Shiprocket API...
+[2026-08-07 14:25:10] INFO : ✅ Shiprocket Authentication Successful
+[2026-08-07 14:25:11] INFO : Shiprocket POST /orders/create/adhoc Success
+[2026-08-07 14:25:16] INFO : Shiprocket POST /courier/assign/awb Success
+[2026-08-07 14:25:16] INFO : AWB Assigned Successfully: 371517264279
+[2026-08-07 14:25:17] ERROR : Shiprocket API Error [/courier/generate/pickup]: Already in Pickup Queue.
+[2026-08-07 14:25:17] ERROR : Pickup Request Failed: Already in Pickup Queue.
+[2026-08-07 14:34:33] INFO : Create Shipment API Called
+[2026-08-07 14:34:35] INFO : Authenticating with Shiprocket API...
+[2026-08-07 14:34:35] INFO : ✅ Shiprocket Authentication Successful
+[2026-08-07 14:34:36] INFO : Shiprocket GET /courier/serviceability Success
+[2026-08-07 14:34:36] INFO : Lowest Rate Courier Selected: Amazon COD Surface 500gm (ID: 195) - Cost: ₹101.36
+[2026-08-07 14:34:36] INFO : Shiprocket POST /orders/create/adhoc Success
+[2026-08-07 14:34:40] INFO : Shiprocket POST /courier/assign/awb Success
+[2026-08-07 14:34:40] INFO : AWB Assigned Successfully: 371517424505 (Amazon COD Surface 500gm)
+[2026-08-07 14:34:40] ERROR : Shiprocket API Error [/courier/generate/pickup]: Already in Pickup Queue.
+[2026-08-07 14:34:40] ERROR : Pickup Request Failed: Already in Pickup Queue.
+[2026-08-07 14:44:02] INFO : Create Shipment API Called
+[2026-08-07 14:44:04] INFO : Authenticating with Shiprocket API...
+[2026-08-07 14:44:04] INFO : ✅ Shiprocket Authentication Successful
+[2026-08-07 14:44:05] INFO : Shiprocket GET /courier/serviceability Success
+[2026-08-07 14:44:05] INFO : Selected Courier: Amazon COD Surface 500gm | Total Freight Rate: ₹101.36 | Customer 45% Share: ₹46
+[2026-08-07 14:44:05] INFO : Shiprocket POST /orders/create/adhoc Success
+[2026-08-07 14:44:08] INFO : Shiprocket POST /courier/assign/awb Success
+[2026-08-07 14:44:08] INFO : AWB Assigned Successfully: 371517590170 (Amazon COD Surface 500gm)
+[2026-08-07 14:44:09] ERROR : Shiprocket API Error [/courier/generate/pickup]: Already in Pickup Queue.
+[2026-08-07 14:44:09] ERROR : Pickup Request Failed: Already in Pickup Queue.
+[2026-08-07 15:49:20] INFO : Create Shipment API Called
+[2026-08-07 15:49:21] INFO : Authenticating with Shiprocket API...
+[2026-08-07 15:49:21] INFO : ✅ Shiprocket Authentication Successful
+[2026-08-07 15:49:21] INFO : Shiprocket GET /courier/serviceability Success
+[2026-08-07 15:49:21] INFO : Fallback Cheapest Courier Selected: Amazon COD Surface 500gm
+[2026-08-07 15:49:21] INFO : Selected Courier: Amazon COD Surface 500gm | Total Freight Rate: ₹101.36 | Customer 40% Share: ₹41
+[2026-08-07 15:49:22] INFO : Shiprocket POST /orders/create/adhoc Success
+[2026-08-07 15:49:25] INFO : Shiprocket POST /courier/assign/awb Success
+[2026-08-07 15:49:25] INFO : AWB Assigned Successfully: 371518626113 (Amazon COD Surface 500gm)
+[2026-08-07 15:49:26] ERROR : Shiprocket API Error [/courier/generate/pickup]: Already in Pickup Queue.
+[2026-08-07 15:49:26] ERROR : Pickup Request Failed: Already in Pickup Queue.
