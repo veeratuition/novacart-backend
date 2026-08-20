@@ -116,23 +116,27 @@ function validateServiceAccount(account, source) {
 }
 
 let firebaseApp;
+let firebaseInitializationError = null;
 
 if (getApps().length === 0) {
-  const serviceAccount = buildServiceAccount();
-
-  firebaseApp = initializeApp({
-    credential: cert(serviceAccount),
-    projectId: serviceAccount.projectId,
-  });
-
-  console.log(
-    `🔥 Firebase Admin initialized: ${serviceAccount.projectId}`
-  );
+  try {
+    const serviceAccount = buildServiceAccount();
+    firebaseApp = initializeApp({
+      credential: cert(serviceAccount),
+      projectId: serviceAccount.projectId,
+    });
+    console.log(`🔥 Firebase Admin initialized: ${serviceAccount.projectId}`);
+  } catch (error) {
+    firebaseInitializationError = error;
+    console.error('❌ Firebase Admin initialization failed:', error.message);
+  }
 } else {
   firebaseApp = getApp();
 }
 
-export const db = getFirestore(firebaseApp);
+export const isFirebaseReady = () => Boolean(firebaseApp) && !firebaseInitializationError;
+export const getFirebaseInitializationError = () => firebaseInitializationError;
+export const db = firebaseApp ? getFirestore(firebaseApp) : null;
 export { FieldValue };
 
 /*
