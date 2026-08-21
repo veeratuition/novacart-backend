@@ -4,6 +4,23 @@ import logger from "../utils/logger.js";
 import shiprocketService from "../services/shiprocketService.js";
 
 class ShipmentController {
+  constructor() {
+    // Express invokes route handlers as plain functions. Bind every public
+    // controller method once so internal helper access through `this` remains
+    // safe across all shipment endpoints.
+    for (const methodName of [
+      "authTest",
+      "createShipment",
+      "retryAwb",
+      "trackShipment",
+      "cancelShipment",
+      "generateLabel",
+      "generateInvoice",
+    ]) {
+      this[methodName] = this[methodName].bind(this);
+    }
+  }
+
   _ensureOrderOwnership(order, userId) {
     if (order.sellerId && order.sellerId !== userId) {
       const error = new Error("You are not allowed to manage this order.");
