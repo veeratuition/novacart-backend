@@ -83,6 +83,27 @@ async function findSellerByMobile(mobile) {
   return snap.empty ? null : snap.docs[0];
 }
 
+async function findSellerByEmail(email) {
+  const normalized = normalizeEmail(email);
+  if (!normalized) return null;
+
+  let snap = await db
+    .collection(SELLERS)
+    .where("email", "==", normalized)
+    .limit(1)
+    .get();
+
+  if (!snap.empty) return snap.docs[0];
+
+  snap = await db
+    .collection(SELLERS)
+    .where("loginEmail", "==", normalized)
+    .limit(1)
+    .get();
+
+  return snap.empty ? null : snap.docs[0];
+}
+
 class AuthController {
   async registerSeller(req, res) {
     try {
@@ -512,17 +533,17 @@ class AuthController {
 
   async sellerLogin(req, res) {
     try {
-      const mobile = normalizeMobile(req.body?.mobile);
+      const email = normalizeEmail(req.body?.email);
       const password = String(req.body?.password || "");
 
-      if (!/^[6-9]\d{9}$/.test(mobile) || !password) {
+      if (!email || !email.includes("@") || !password) {
         return res.status(400).json({
           success: false,
-          message: "Mobile number and password are required.",
+          message: "Email address and password are required.",
         });
       }
 
-      const sellerDoc = await findSellerByMobile(mobile);
+      const sellerDoc = await findSellerByEmail(email);
 
       if (!sellerDoc || sellerDoc.data()?.accountCreated !== true) {
         return res.status(401).json({
@@ -532,7 +553,6 @@ class AuthController {
       }
 
       const seller = sellerDoc.data();
-
       const valid = await bcrypt.compare(
         password,
         String(seller.passwordHash || ""),
@@ -541,18 +561,14 @@ class AuthController {
       if (!valid) {
         return res.status(401).json({
           success: false,
-          message: "Invalid mobile number or password.",
+          message: "Invalid email address or password.",
         });
       }
 
       const uid = seller.uid || seller.sellerId || sellerDoc.id;
-      const email = normalizeEmail(seller.email || seller.loginEmail);
+      const mobile = normalizeMobile(seller.mobile || seller.phone);
 
-      const customToken = await getAuth().createCustomToken(uid, {
-        role: "seller",
-        seller: true,
-      });
-
+      // NovaCart login is JWT-based; Firebase client authentication is not required.
       const token = createJwt({
         uid,
         role: "seller",
@@ -568,7 +584,6 @@ class AuthController {
         email,
         role: "seller",
         token,
-        customToken,
       });
     } catch (error) {
       console.error("Seller login error:", error);
